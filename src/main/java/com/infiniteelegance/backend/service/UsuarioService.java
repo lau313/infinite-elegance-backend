@@ -2,6 +2,7 @@ package com.infiniteelegance.backend.service;
 
 import com.infiniteelegance.backend.model.Usuario;
 import java.util.List;
+import com.infiniteelegance.backend.model.Rol;
 
 public interface UsuarioService {
 
@@ -11,5 +12,5 @@ public interface UsuarioService {
     boolean existeCedula(String cedula);
     boolean existeEmail(String email);
     List<Usuario> listarTodos();
-    Usuario cambiarRol(String cedula, Usuario.Rol nuevoRol);
+    Usuario cambiarRol(String cedula, Rol nuevoRol);
 }

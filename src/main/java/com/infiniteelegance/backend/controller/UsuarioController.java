@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import com.infiniteelegance.backend.model.Rol;
+
 
 @RestController
 @RequestMapping("/api/usuarios")
@@ -42,7 +44,7 @@ public class UsuarioController {
     @PutMapping("/{cedula}/rol")
     public ResponseEntity<UsuarioRespuestaDTO> cambiarRol(
             @PathVariable String cedula,
-            @RequestParam Usuario.Rol nuevoRol) {
+            @RequestParam Rol nuevoRol) {
         return ResponseEntity.ok(UsuarioRespuestaDTO.desde(usuarioService.cambiarRol(cedula, nuevoRol)));
     }
 }

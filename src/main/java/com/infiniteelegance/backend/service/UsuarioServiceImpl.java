@@ -5,6 +5,7 @@ import com.infiniteelegance.backend.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import com.infiniteelegance.backend.model.Rol;
 import java.util.List;
 
 @Service
@@ -48,7 +49,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public Usuario cambiarRol(String cedula, Usuario.Rol nuevoRol) {
+    public Usuario cambiarRol(String cedula, Rol nuevoRol) {
         Usuario usuario = buscarPorCedula(cedula);
         usuario.setRol(nuevoRol);
         return usuarioRepository.save(usuario);

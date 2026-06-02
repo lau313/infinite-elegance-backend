@@ -1,7 +1,13 @@
 package com.infiniteelegance.backend.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
+import com.infiniteelegance.backend.model.Rol;
 
 @Data
 @Entity
@@ -26,8 +32,4 @@ public class Usuario {
 
     @Column(nullable = false)
     private boolean activo = true;
-
-    public enum Rol {
-        CLIENTE, EMPLEADO, ADMIN
-    }
 }

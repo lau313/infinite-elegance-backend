@@ -2,6 +2,8 @@ package com.infiniteelegance.backend.dto;
 
 import com.infiniteelegance.backend.model.Usuario;
 import lombok.Data;
+import com.infiniteelegance.backend.model.Rol;
+
 
 @Data
 public class UsuarioRespuestaDTO {
@@ -9,7 +11,7 @@ public class UsuarioRespuestaDTO {
     private String cedula;
     private String nombre;
     private String email;
-    private Usuario.Rol rol;
+    private Rol rol;
     private boolean activo;
 
     public static UsuarioRespuestaDTO desde(Usuario usuario) {
